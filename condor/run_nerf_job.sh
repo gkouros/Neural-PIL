@@ -1,15 +1,18 @@
 #!/bin/bash
-echo 'NeRF job started'
+echo 'Neural-PIL job started'
+
 NAME=$1
 EXP=$2
-source /users/visics/gkouros/.bashrc
+
+source ~/miniconda3/etc/profile.d/conda.sh
+conda activate neuralpil
+
 export PATH="/usr/local/cuda-11/bin:/usr/local/cuda/bin:$PATH"
 export LD_LIBRARY_PATH="/usr/local/cuda-11/lib64:/usr/local/cuda/lib64:$LD_LIBRARY_PATH"
-conda activate neuralpil
 DIR=/users/visics/gkouros/projects/nerf-repos/NeRD-Neural-Reflectance-Decomposition/
 cd $DIR
 
-python3 train_neural_pil.py --datadir /esat/topaz/gkouros/datasets/nerf/$NAME --basedir logs/$NAME --expname $EXP --gpu 0 --config configs/neural_pil/real_world.txt --spherify
+python3 train_neural_pil.py --datadir /esat/topaz/gkouros/datasets/nerf/$NAME --basedir logs/$NAME --expname $EXP --gpu $CUDA_VISIBLE_DEVICES --config configs/neural_pil/real_world.txt --spherify
 
 conda deactivate
-echo 'NeRF job terminated'
+echo 'Neural-PIL job terminated'
