@@ -11,7 +11,7 @@ Initialdir = /users/visics/gkouros/projects/nerf-repos/Neural-PIL/condor
 Executable = /users/visics/gkouros/projects/nerf-repos/Neural-PIL/condor/run_nerf_job.sh
 Arguments = chrysler_360 $(Cluster)
 
-NiceUser = false
+NiceUser = true
 
 Log    =  ../logs/chrysler_360/exp.$(Cluster).log
 Output =  ../logs/chrysler_360/exp.$(Cluster).out
