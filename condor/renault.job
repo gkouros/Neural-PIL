@@ -1,7 +1,7 @@
 Universe = vanilla
 
 RequestCpus = 8
-Request_GPUs = 2
+Request_GPUs = 4
 RequestMemory = 8Gb
 +RequestWalltime = 259000
 
