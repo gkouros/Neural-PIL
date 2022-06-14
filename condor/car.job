@@ -8,14 +8,14 @@ RequestMemory = 8Gb
 Requirements = (CUDACapability >= 3.5)&&(CUDAGlobalMemoryMb >= 11000.0)
 
 Initialdir = /users/visics/gkouros/projects/nerf-repos/Neural-PIL/condor
-Executable = /users/visics/gkouros/projects/nerf-repos/Neural-PIL/condor/run_npil_real_world.sh
-Arguments = renault $(Cluster)
+Executable = /users/visics/gkouros/projects/nerf-repos/Neural-PIL/condor/run_npil_synthetic.sh
+Arguments = Car $(Cluster)
 
 NiceUser = true
 
-Log    =  ../logs/renault/exp.$(Cluster).log
-Output =  ../logs/renault/exp.$(Cluster).out
-Error  =  ../logs/renault/exp.$(Cluster).err
+Log    =  ../logs/Car/exp.$(Cluster).log
+Output =  ../logs/Car/exp.$(Cluster).out
+Error  =  ../logs/Car/exp.$(Cluster).err
 
 Notification = Complete
 Queue 1

@@ -8,7 +8,7 @@ RequestMemory = 8Gb
 Requirements = (CUDACapability >= 3.5)&&(CUDAGlobalMemoryMb >= 8000.0)
 
 Initialdir = /users/visics/gkouros/projects/nerf-repos/Neural-PIL/condor
-Executable = /users/visics/gkouros/projects/nerf-repos/Neural-PIL/condor/run_nerf_job.sh
+Executable = /users/visics/gkouros/projects/nerf-repos/Neural-PIL/condor/run_npil_real_world.sh
 Arguments = tesla $(Cluster)
 
 NiceUser = true
